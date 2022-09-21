@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "d6cd8db5-a634-47a2-a4e7-d7c5505194dc",
+		"name": "OwnRanking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetHighLevelScore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/:level/highscorelist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						":level",
+						"highscorelist"
+					],
+					"variable": [
+						{
+							"key": "level",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/:idUser/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						":idUser",
+						"login"
+					],
+					"variable": [
+						{
+							"key": "idUser",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddRankingUserScore",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "0"
+				},
+				"url": {
+					"raw": "http://localhost:8000/:level/score?sessionKey=Ni0yODg1YWJjNy0wMjMyLTQ2NjItOGJmYi00M2NjY2YxY2Y4YzItMTY1NTg0Nzg2MTg1MQ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						":level",
+						"score"
+					],
+					"query": [
+						{
+							"key": "sessionKey",
+							"value": "Ni0yODg1YWJjNy0wMjMyLTQ2NjItOGJmYi00M2NjY2YxY2Y4YzItMTY1NTg0Nzg2MTg1MQ"
+						}
+					],
+					"variable": [
+						{
+							"key": "level",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
